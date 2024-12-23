@@ -1,7 +1,7 @@
 # PyTorch-CNN-for-MNIST-Digit-Classification
 
 This project implements a Convolutional Neural Network (CNN) using PyTorch to classify handwritten digits from the MNIST dataset. The network is trained and tested on the MNIST dataset, and the trained model can predict digits from uploaded images.
-Table of Contents
+Table of Contents : 
 
     Project Overview
     Setup & Installation
@@ -13,7 +13,7 @@ Table of Contents
     Conclusion
     License
 
-Project Overview
+Project Overview :
 
 This project uses a Convolutional Neural Network (CNN) to classify digits in the MNIST dataset. The model consists of two convolutional layers followed by fully connected layers, using ReLU activation and max pooling. The network is trained using the Adam optimizer and evaluated using the Cross-Entropy Loss function.
 
@@ -33,7 +33,7 @@ You can install these libraries using pip:
 
 pip install torch torchvision matplotlib numpy tqdm pillow
 
-Data Loading & Preprocessing
+Data Loading & Preprocessing :
 
 The MNIST dataset is loaded from the torchvision.datasets module. The dataset consists of grayscale images (28x28 pixels) of handwritten digits (0-9). The following transformations are applied to the images:
 
@@ -41,7 +41,7 @@ The MNIST dataset is loaded from the torchvision.datasets module. The dataset co
     Normalize the images to have a mean of 0.1307 and a standard deviation of 0.3081.
 
 Training and test datasets are loaded using the DataLoader class, which also supports parallel data loading with multiple workers.
-CNN Model Architecture
+CNN Model Architecture : 
 
 The CNN architecture consists of the following layers:
 
@@ -52,7 +52,7 @@ The CNN architecture consists of the following layers:
     Dropout: A dropout rate of 25% is applied after the first fully connected layer to prevent overfitting.
 
 The final output layer has 10 neurons, corresponding to the 10 possible digits (0-9).
-Training & Evaluation
+Training & Evaluation : 
 
 The model is trained for 10 epochs using the Adam optimizer with a learning rate of 0.001. During training, both the loss and accuracy on the training and test datasets are logged.
 
@@ -63,7 +63,7 @@ The training process involves the following steps:
     Perform a backward pass and update the model parameters using the optimizer.
 
 The model is evaluated on the test set after each epoch to track performance.
-Model Prediction
+Model Prediction : 
 
 The trained model can be used to predict handwritten digits from user-uploaded images. The following steps are performed for prediction:
 
@@ -72,7 +72,7 @@ The trained model can be used to predict handwritten digits from user-uploaded i
     Pass the preprocessed image through the trained CNN model.
     Display the predicted digit along with the uploaded image.
 
-Results
+Results : 
 
 After training, the loss and accuracy on both the training and test sets are plotted to visualize the model's performance over epochs.
 
@@ -81,6 +81,6 @@ Example results:
     Training Loss: 0.1108, Training Accuracy: 97.65%
     Test Loss: 0.1076, Test Accuracy: 97.80%
 
-Conclusion
+Conclusion : 
 
 This project demonstrates the use of a CNN for digit classification using the MNIST dataset. The model achieves high accuracy on both the training and test sets. The trained model can be used to classify digits in user-uploaded images.
